@@ -8,6 +8,8 @@ import { FormComponent as HeadingFormComponent } from './routes/heading/form/for
 import { FormComponent as WorkExperienceFormComponent } from './routes/work-experience/form/form.component';
 import { FormComponent as EductionFormComponent } from './routes/education/form/form.component';
 import { IntroComponent as SkillsIntroComponent } from './routes/skills/intro/intro.component';
+import { AddSkillsComponent } from './routes/skills/add-skills/add-skills.component';
+import { SummaryComponent } from './routes/summary/summary.component';
 
 export const routes: Routes = [
   {
@@ -31,6 +33,13 @@ export const routes: Routes = [
   {
     path: 'skills',
     component: SkillsComponent,
-    children: [{ path: 'intro', component: SkillsIntroComponent }],
+    children: [
+      { path: 'intro', component: SkillsIntroComponent },
+      { path: 'add-skills', component: AddSkillsComponent },
+    ],
+  },
+  {
+    path: 'summary',
+    component: SummaryComponent,
   },
 ];

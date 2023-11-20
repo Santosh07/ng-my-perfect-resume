@@ -1,23 +1,34 @@
-<p>Skills intro works!</p>
 <div>
-  <button
-    mat-raised-button
-    color="primary"
-    (click)="
-      this.routeService.updateRoutes(this.route, this.router);
-      this.routeService.goToPreviousRoute()
-    "
-  >
-    Back
-  </button>
-  <button
-    mat-raised-button
-    color="primary"
-    (click)="
-      this.routeService.updateRoutes(this.route, this.router);
-      this.routeService.goToNextRoute()
-    "
-  >
-    Next
-  </button>
+  <div class="text-container">
+    <p>Next, let’s take care of your</p>
+    <p>Skills</p>
+    <p>Here’s what you need to know:</p>
+    <p>
+      Employers scan skills for relevant keywords. <br />
+      We’ll help you choose the best ones.
+    </p>
+  </div>
+
+  <div class="button-container">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="
+        this.routeService.updateRoutes(this.route, this.router);
+        this.routeService.goToPreviousRoute()
+      "
+    >
+      Back
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="
+        this.routeService.updateRoutes(this.route, this.router);
+        this.routeService.goToNextRoute()
+      "
+    >
+      Next
+    </button>
+  </div>
 </div>

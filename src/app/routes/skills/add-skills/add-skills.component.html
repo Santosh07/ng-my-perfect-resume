@@ -1,0 +1,61 @@
+<div class="text-container">
+  <p>What skills would you like to highlight?</p>
+  <p>Choose from our pre-written examples below or write your own.</p>
+</div>
+
+<div class="skill-input-area-wrapper">
+  <div class="skill-search-section">
+    <p>SEARCH BY JOB TITLE FOR PRE-WRITTEN EXAMPLES</p>
+    <div>
+      <mat-form-field appearance="outline" class="job-title-input">
+        <mat-label>Search by job title (Software Developer) </mat-label>
+        <input
+          matInput
+          [value]="jobTitle"
+          (change)="handleJobTitleInput($event)"
+        />
+      </mat-form-field>
+      <mat-icon fontIcon="search" (click)="getSkillsList()"></mat-icon>
+    </div>
+    <div class="fetched-skill-list">
+      @for (skill of this.skillList; track skill) {
+      <div class="skill-list-row">
+        @if (this.addedSkills.includes(skill)) {
+        <mat-icon
+          fontIcon="remove"
+          (click)="removeSkillFromList(skill)"
+        ></mat-icon>
+        } @else {
+        <mat-icon fontIcon="add" (click)="addSkilltoList(skill)"></mat-icon>
+        }
+        <span>{{ skill }}</span>
+      </div>
+      }
+    </div>
+  </div>
+  <div class="skill-input-area">
+    <p>Skills:</p>
+    <textarea
+      matInput
+      rows="10"
+      placeholder="Type your skills here, or choose skills from skills list."
+      [value]="addedSkillsString"
+      (change)="handleSkillInput($event)"
+    ></textarea>
+    <div class="skills-button-container">
+      <button
+        mat-stroked-button
+        color="primary"
+        (click)="
+          this.routeService.updateRoutes(this.route, this.router);
+          this.routeService.goToPreviousRoute()
+        "
+      >
+        Back
+      </button>
+      <button mat-raised-button color="primary" (click)="handleNextClick()">
+        Next: Summary
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-container {
+  & p:first-of-type {
+    font-size: 1.5rem;
+  }
+
+  & p:last-of-type {
+    color: rebeccapurple;
+  }
+}
+
+.skill-input-area-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 32px;
+  column-gap: 32px;
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.job-title-input {
+  width: 100%;
+}
+
+.skill-search-section {
+  & > div:first-of-type {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+
+    .mat-icon {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+.skill-input-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+
+  @media only screen and (min-width: 1024px) {
+    margin-top: 0px;
+  }
+}
+
+.skills-button-container {
+  width: 100%;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.skill-list-row {
+  display: flex;
+  flex-direction: row;
+
+  span {
+    font-size: 1rem;
+  }
+
+  .mat-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.fetched-skill-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 8px;
+}

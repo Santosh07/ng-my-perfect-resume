@@ -77,14 +77,6 @@ export class RoutesService {
     {
       label: 'Summary',
       link: 'summary',
-      subRoutes: [
-        {
-          link: 'home',
-        },
-        {
-          link: 'add-summary',
-        },
-      ],
     },
     {
       label: 'Review Resume',

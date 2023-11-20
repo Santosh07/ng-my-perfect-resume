@@ -1,0 +1,23 @@
+<p>summary works!</p>
+<div class="button-container">
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="
+      this.routeService.updateRoutes(this.route, this.router);
+      this.routeService.goToPreviousRoute()
+    "
+  >
+    Back
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="
+      this.routeService.updateRoutes(this.route, this.router);
+      this.routeService.goToNextRoute()
+    "
+  >
+    Next
+  </button>
+</div>

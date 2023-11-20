@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { NavDrawerComponent } from './nav-drawer/nav-drawer.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -21,5 +22,4 @@ import { NavDrawerComponent } from './nav-drawer/nav-drawer.component';
 export class AppComponent {
   title = 'ng-my-perfect-resume';
   opened = true;
-
 }
