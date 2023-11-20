@@ -1,0 +1,26 @@
+.nav-drawer-wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-primary);
+  height: 100%;
+  padding: 56px 32px;
+
+  & P:first-child > strong {
+    color: var(--color-red);
+  }
+}
+
+.nav-drawer-wrapper > p:first-child {
+  color: white;
+  font-size: 20px;
+}
+
+.stepper {
+  background-color: var(--color-primary);
+}
+
+.step-label {
+  color: white;
+  margin: 0;
+  font-size: 16px;
+}

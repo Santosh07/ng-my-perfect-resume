@@ -1,0 +1,17 @@
+<div class="nav-drawer-wrapper">
+  <p>
+    My<strong>perfect</strong>resume
+    <mat-vertical-stepper #stepper class="stepper" id="test-stepper">
+      @for (step of steps; track step.label) {
+      <mat-step id="step" id="test-step">
+        <ng-template matStepLabel
+          ><p class="step-label">{{ step.label }}</p></ng-template
+        >
+      </mat-step>
+      }
+    </mat-vertical-stepper>
+  </p>
+  <!-- <Button variant="contained" color="error" onClick={logoutUser}>
+    Log Out
+  </Button> -->
+</div>

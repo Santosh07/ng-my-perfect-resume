@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  line-height: 1.5;
+
+  --color-primary: #0a1936;
+  --color-secondary: #0f6f79;
+  --color-red: #fa2e23;
+}
+
+#test-stepper > div > .mat-step-header + div::before {
+  background-color: white !important;
+}
+
+#test-stepper > div > .mat-step-header {
+  pointer-events: none !important;
+}

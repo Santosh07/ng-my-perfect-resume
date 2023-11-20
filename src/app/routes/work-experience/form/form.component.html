@@ -1,0 +1,23 @@
+<p>work-experience form works!</p>
+<div>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="
+      this.routeService.updateRoutes(this.route, this.router);
+      this.routeService.goToPreviousRoute()
+    "
+  >
+    Back
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="
+      this.routeService.updateRoutes(this.route, this.router);
+      this.routeService.goToNextRoute()
+    "
+  >
+    Next
+  </button>
+</div>

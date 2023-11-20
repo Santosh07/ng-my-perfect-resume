@@ -1,0 +1,19 @@
+.example-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.drawer {
+  width: 280px;
+  background-color: var(--color-primary);
+}
+
+.mat-drawer-content {
+  width: calc(100% - 280px);
+}
+
+.mat-drawer-content > div {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 56px;
+}
