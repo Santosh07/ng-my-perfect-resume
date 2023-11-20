@@ -1,8 +1,19 @@
 <mat-drawer-container class="example-container">
-  <mat-drawer mode="side" [(opened)]="opened" class="drawer"
+  <mat-drawer
+    mode="side"
+    [(opened)]="opened"
+    [mode]="mode.value || 'over'"
+    class="drawer"
     ><app-nav-drawer />
   </mat-drawer>
   <mat-drawer-content
     ><div><router-outlet /></div
   ></mat-drawer-content>
 </mat-drawer-container>
+@if (showMenu) {
+<mat-icon
+  fontIcon="menu"
+  class="app-menu-icon"
+  (click)="this.opened = true"
+></mat-icon>
+}

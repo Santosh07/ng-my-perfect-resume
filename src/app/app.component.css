@@ -9,11 +9,23 @@
 }
 
 .mat-drawer-content {
-  width: calc(100% - 280px);
+  width: 80%;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+  }
 }
 
 .mat-drawer-content > div {
   width: 80%;
   margin: 0 auto;
   margin-top: 56px;
+}
+
+.app-menu-icon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 999;
 }
